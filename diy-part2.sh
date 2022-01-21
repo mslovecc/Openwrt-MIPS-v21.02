@@ -14,11 +14,11 @@
 sed -i 's/192.168.1.1/192.168.0.1/g' package/base-files/files/bin/config_generate
 
 # extend TP-link firmware size
-sed -i 's/4Mlzma/8Mlzma/g' target/linux/ar71xx/image/common-tp-link.mk
-sed -i 's/3904k/7936k/g' target/linux/ar71xx/image/common-tp-link.mk
+sed -i 's/4Mlzma/8Mlzma/g' target/linux/ath79/image/common-tp-link.mk
+sed -i 's/3904k/7936k/g' target/linux/ath79/image/common-tp-link.mk
 
 # extend Netgear firmware size
-sed -i 's/3712k(firmware)/7808k(firmware)/g' target/linux/ar71xx/image/legacy.mk
+sed -i 's/3712k/7808k/g' target/linux/ath79/image/tiny-netgear.mk
 
 # Fix Material theme progressbar font size
 sed -i 's/1.3em/1em/g' package/feeds/luci/luci-theme-material/htdocs/luci-static/material/cascade.css
